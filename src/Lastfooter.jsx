@@ -16,9 +16,9 @@ function Lastfooter() {
         <img src={instragam} alt="" />
         <img src={twitter} alt="" />
        </div>
-       <div className=' flex justify-between w-10/12 mx-auto pt-3  border-t-2'>
+       <div className=' grid grid-cols-1 md:grid-cols-2 text-center md:text-left justify-between w-10/12 mx-auto pt-3  border-t-2'>
         <p>© 2026 KeenKeeper. All rights reserved.</p>
-        <div className='flex gap-5'>
+        <div className='flex  gap-5 justify-center md:justify-end'>
           <p>Privacy Policy</p>
           <p>Terms of Service</p>
           <p>Cookies</p>

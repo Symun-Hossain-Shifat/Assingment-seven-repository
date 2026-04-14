@@ -34,7 +34,9 @@ function HomePage() {
         </div>
         
         </div>
+        <h1 className='font-bold text-2xl text-left'>My Friends</h1>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-3 py-5'>
+            
             {
                 Datas.map(Data => (
                     <div className="card bg-base-100  shadow-sm rounded-b-md">
@@ -47,6 +49,11 @@ function HomePage() {
   <div className="card-body items-center text-center">
     <h2 className="card-title">{Data.name}</h2>
     <p>{Data.email}</p>
+    <div className='flex gap-2 '>
+        {Data.tags.map( tag => (
+            <div className="badge badge-soft badge-accent items-center text-center">{tag}</div>
+        ))}
+    </div>
     <div className={`badge ${Data.status === 'Almost Due'?'badge-warning':Data.status === 'on-track'?'badge-primary':'badge-error'}`}>{Data.status}</div>
   </div>
 </div>
