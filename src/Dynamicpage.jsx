@@ -15,8 +15,8 @@ function Dynamicpage() {
     const Data = Datas.find( Data => Data.id === Number(id));
     console.log(Data)
   return (
-    <div className='grid grid-cols-1 md:grid-cols-4 gap-4 my-5 w-10/12 mx-auto bg-gray-100'>
-        <div className='col-span-1 border-2 space-y-3'>
+    <div className='grid grid-cols-1 md:grid-cols-4 gap-4 p-5 my-5 w-10/12 mx-auto bg-gray-100'>
+        <div className='col-span-1  space-y-3'>
             <div key={Data.id} to={`/Dynamicpage/${Data.id}`} className="card bg-base-100  shadow-sm rounded-b-md">
   <figure className="px-10 pt-10">
     <img
@@ -41,7 +41,7 @@ function Dynamicpage() {
           <div className='flex gap-3 items-center bg-white py-3 text-red-600 justify-center'> <span><RiDeleteBin6Line /></span> <p className='font-semibold'>Delete</p></div>
           
         </div>
-        <div className='col-span-3 border-2 space-y-3'>
+        <div className='col-span-3  space-y-3'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div className=' items-center text-center py-8 rounded-2xl bg-white'>
                   <h2 className='font-bold text-2xl text-green-400'>{Data.days_since_contact}</h2>
@@ -67,15 +67,15 @@ function Dynamicpage() {
             <div className=' bg-white rounded-2xl p-4 space-y-3'>
               <h2  className='font-bold text-1xl'>Quick Check In</h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                <div className='border bg-gray-100 py-3 rounded-2xl items-center text-center'>
+                <div className=' bg-gray-100 py-3 rounded-2xl items-center text-center'>
                   <img className='mx-auto w-[5]' src={call} alt="" />
                   <h3 className='font-bold text-2xl'>Call</h3>
                 </div>
-                <div className='border bg-gray-100 py-3 rounded-2xl items-center text-center'>
+                <div className=' bg-gray-100 py-3 rounded-2xl items-center text-center'>
                   <img className='mx-auto w-[5]' src={text} alt="" />
                   <h3 className='font-bold text-2xl'>Text</h3>
                 </div>
-                <div className='border bg-gray-100 py-3 rounded-2xl items-center text-center'>
+                <div className=' bg-gray-100 py-3 rounded-2xl items-center text-center'>
                   <img className='mx-auto w-[5]' src={vedio} alt="" />
                   <h3 className='font-bold text-2xl'>Vedio</h3>
                 </div>

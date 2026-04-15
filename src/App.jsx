@@ -23,19 +23,24 @@ function App() {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><NavLink to='/'> <span><IoHomeOutline /></span>Home</NavLink></li>
-      <li><NavLink to='/timelinegpage'><span><RiTimeLine /></span>TimeLine</NavLink></li>
-      <li><NavLink to='/statspage'><span><TfiStatsUp /></span>Stats</NavLink></li>
+        className="menu menu-sm gap-3 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li>
+          <NavLink 
+          className={({isActive}) => isActive ? 'bg-green-900 text-white':''} to='/'> 
+          <span><IoHomeOutline />
+          </span>Home</NavLink>
+          </li>
+      <li><NavLink className={({isActive}) => isActive ? 'bg-green-900 text-white':''} to='/timelinegpage'><span><RiTimeLine /></span>TimeLine</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive ? 'bg-green-900 text-white':''} to='/statspage'><span><TfiStatsUp /></span>Stats</NavLink></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl"><img src={logo} alt="" /></a>
   </div>
   <div className="navbar-end hidden mx-10 lg:flex">
-    <ul className="menu menu-horizontal px-1 font-semibold">
-      <li><NavLink to='/'> <span><IoHomeOutline /></span>Home</NavLink></li>
-      <li><NavLink to='/timelinegpage'><span><RiTimeLine /></span>TimeLine</NavLink></li>
-      <li><NavLink to='/statspage'><span><TfiStatsUp /></span>Stats</NavLink></li>
+    <ul className="menu menu-horizontal px-1 font-semibold gap-3">
+      <li><NavLink className={({isActive}) => isActive ? 'bg-green-900 text-white':''} to='/'> <span><IoHomeOutline /></span>Home</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive ? 'bg-green-900 text-white':''} to='/timelinegpage'><span><RiTimeLine /></span>TimeLine</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive ? 'bg-green-900 text-white':''} to='/statspage'><span><TfiStatsUp /></span>Stats</NavLink></li>
     </ul>
   </div>
   
