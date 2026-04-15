@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import HomePage from './Home.jsx'
 import TimelinePage from './timeline.jsx'
 import StatsPage from './stats.jsx'
+import Dynamicpage from './Dynamicpage.jsx'
 
 const useLoader = async () => {
  const res = await fetch('/Data.json');
@@ -25,7 +26,8 @@ const router  = createBrowserRouter(
       children:[
     {index: true ,loader : useLoader, element: <HomePage></HomePage>},
     {path : 'timelinegpage' , element : <TimelinePage></TimelinePage>},
-    {path: 'statspage' , element : <StatsPage></StatsPage>}
+    {path: 'statspage' , element : <StatsPage></StatsPage>},
+    {path:'Dynamicpage/:id' , loader:useLoader, element:<Dynamicpage></Dynamicpage>}
 
       ]
     }

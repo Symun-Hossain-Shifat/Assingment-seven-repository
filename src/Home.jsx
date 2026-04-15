@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaPlus } from 'react-icons/fa'
-import { useLoaderData } from 'react-router'
+import { NavLink, useLoaderData } from 'react-router'
 
 function HomePage() {
     const Datas  = useLoaderData();
@@ -39,7 +39,7 @@ function HomePage() {
             
             {
                 Datas.map(Data => (
-                    <div className="card bg-base-100  shadow-sm rounded-b-md">
+                    <NavLink key={Data.id} to={`/Dynamicpage/${Data.id}`} className="card bg-base-100  shadow-sm rounded-b-md">
   <figure className="px-10 pt-10">
     <img
       src={Data.picture}
@@ -56,7 +56,7 @@ function HomePage() {
     </div>
     <div className={`badge ${Data.status === 'Almost Due'?'badge-warning':Data.status === 'on-track'?'badge-primary':'badge-error'}`}>{Data.status}</div>
   </div>
-</div>
+</NavLink>
                 ))
             }
         </div>

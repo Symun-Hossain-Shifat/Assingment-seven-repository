@@ -11,7 +11,7 @@ import logo from './assets/logo.png'
 
 function App() {
   const Navigation  = useNavigation();
-    console.log(Navigation.state);
+    
 
   return (
     <>
