@@ -22,7 +22,13 @@ const {Call , Text , Vedio } = useContext(UserContext)
 
 
   return (
-    <PieChart className='mx-auto py-10' style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }}>
+
+
+    <div className='w-10/12 mx-auto my-10'>
+      <h2 className='text-3xl font-bold'>Friendship Analytics </h2>
+      <p className='font-semibold text-green-900 my-4 text-left'>By Interaction Type</p>
+      <PieChart className='mx-auto py-10' style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }}>
+      
       <Pie
         data={data}
         innerRadius="80%"
@@ -37,6 +43,9 @@ const {Call , Text , Vedio } = useContext(UserContext)
       />
      
     </PieChart>
+
+    </div>
+   
   );
 }
 export default  StatsPage  

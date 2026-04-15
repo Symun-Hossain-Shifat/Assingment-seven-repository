@@ -13,7 +13,7 @@ function UserContextProvider ({children}) {
     const callHandle = (data) => {
       const Exist = Call.find(Data => Data.id === data.id);
       if(!Exist){
-        setCall([...Call , data]);
+        setCall([...Call ,{ ...data , Time : new Date().toLocaleTimeString() , Date : new Date().toLocaleDateString()}]);
         toast("This Person Added To The Call List !")
       }else{
         toast.warning("This Person Already Exist In The Call List !")
@@ -23,7 +23,7 @@ function UserContextProvider ({children}) {
     const TextHandle = (data) => {
       const Exist = Text.find(Data => Data.id === data.id);
       if(!Exist){
-        setText([...Text , data]);
+        setText([...Text ,{ ...data , Time : new Date().toLocaleTimeString() , Date : new Date().toLocaleDateString()}]);
         toast("This Person Added To The Text List !")
       }else{
         toast.warning("This Person Already Exist In The Text List !")
@@ -33,7 +33,7 @@ function UserContextProvider ({children}) {
     const VedioHandle = (data) => {
       const Exist = Vedio.find(Data => Data.id === data.id);
       if(!Exist){
-        setVedio([...Vedio , data]);
+        setVedio([...Vedio ,{ ...data , Time : new Date().toLocaleTimeString() , Date : new Date().toLocaleDateString()}]);
         toast("This Person Added To The  Vedio List !")
       }else{
         toast.warning("This Person Already Exist In The Vedio List !")

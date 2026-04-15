@@ -36,7 +36,7 @@ function Dynamicpage() {
     <h2 className="card-title">{Data.name}</h2>
     
     <div className='flex gap-2 '>
-        {Data.tags.map( (tag , index) => (
+        {Data.tags.map( (tag ,index) => (
             <div key={index} className="badge badge-soft badge-accent items-center text-center">{tag}</div>
         ))}
     </div>
@@ -75,15 +75,15 @@ function Dynamicpage() {
             <div className=' bg-white rounded-2xl p-4 space-y-3'>
               <h2  className='font-bold text-1xl'>Quick Check In</h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                <div onClick={() => {callHandle(Data)}}  className='  bg-gray-100 py-3 rounded-2xl items-center text-center'>
+                <div onClick={() => {callHandle(Data)}}  className=' cursor-pointer bg-gray-100 py-3 rounded-2xl items-center text-center'>
                   <img className='mx-auto w-[5]' src={call} alt="" />
                   <h3 className='font-bold text-2xl'>Call</h3>
                 </div>
-                <div onClick={() => {TextHandle(Data)}}  className=' bg-gray-100 py-3 rounded-2xl items-center text-center'>
+                <div onClick={() => {TextHandle(Data)}}  className=' cursor-pointer bg-gray-100 py-3 rounded-2xl items-center text-center'>
                   <img className='mx-auto w-[5]' src={text} alt="" />
                   <h3 className='font-bold text-2xl'>Text</h3>
                 </div>
-                <div onClick={() => {VedioHandle(Data)}}  className=' bg-gray-100 py-3 rounded-2xl items-center text-center'>
+                <div onClick={() => {VedioHandle(Data)}}  className=' cursor-pointer bg-gray-100 py-3 rounded-2xl items-center text-center'>
                   <img className='mx-auto w-[5]' src={vedio} alt="" />
                   <h3 className='font-bold text-2xl'>Vedio</h3>
                 </div>
