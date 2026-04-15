@@ -50,8 +50,8 @@ function HomePage() {
     <h2 className="card-title">{Data.name}</h2>
     <p>{Data.email}</p>
     <div className='flex gap-2 '>
-        {Data.tags.map( tag => (
-            <div className="badge badge-soft badge-accent items-center text-center">{tag}</div>
+        {Data.tags.map( (tag , index) => (
+            <div key={index} className="badge badge-soft badge-accent items-center text-center">{tag}</div>
         ))}
     </div>
     <div className={`badge ${Data.status === 'Almost Due'?'badge-warning':Data.status === 'on-track'?'badge-primary':'badge-error'}`}>{Data.status}</div>

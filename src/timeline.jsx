@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { RiArrowDropDownLine } from 'react-icons/ri'
+import { UserContext } from './UserContext'
 
 function  TimelinePage() {
+
+
+const {Call , Text , Vedio } = useContext(UserContext)
+
+console.log(Call , Text , Vedio)
+
   return (
     <div className='w-10/12 mx-auto bg-gray-100 p-5 my-10 '> 
         <h2 className='text-3xl font-bold '>TimeLine </h2>
@@ -12,6 +19,11 @@ function  TimelinePage() {
     <li><a>Text</a></li>
     <li><a>Vedio</a></li>
   </ul>
+</div>
+
+
+<div>
+  
 </div>
     </div>
   )

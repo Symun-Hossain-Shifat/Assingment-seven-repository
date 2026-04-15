@@ -7,6 +7,8 @@ import HomePage from './Home.jsx'
 import TimelinePage from './timeline.jsx'
 import StatsPage from './stats.jsx'
 import Dynamicpage from './Dynamicpage.jsx'
+import { ToastContainer } from 'react-toastify'
+import UserContextProvider from './UserContext.jsx'
 
 const useLoader = async () => {
  const res = await fetch('/Data.json');
@@ -37,7 +39,11 @@ const router  = createBrowserRouter(
 createRoot(document.getElementById('root')).render(
   
 <StrictMode>
-   <RouterProvider router = {router}></RouterProvider>
+  <UserContextProvider>
+  <RouterProvider router = {router}></RouterProvider>
+  <ToastContainer></ToastContainer>
+  </UserContextProvider>
+   
   </StrictMode>,
   
   
