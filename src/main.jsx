@@ -9,6 +9,7 @@ import StatsPage from './stats.jsx'
 import Dynamicpage from './Dynamicpage.jsx'
 import { ToastContainer } from 'react-toastify'
 import UserContextProvider from './UserContext.jsx'
+import Notfound from './Notfound.jsx'
 
 const useLoader = async () => {
  const res = await fetch('/Data.json');
@@ -32,6 +33,10 @@ const router  = createBrowserRouter(
     {path:'Dynamicpage/:id' , loader:useLoader, element:<Dynamicpage></Dynamicpage>}
 
       ]
+    },
+    {
+      path:'*',
+      element: <Notfound></Notfound>
     }
     
   ]
