@@ -35,7 +35,7 @@ function HomePage() {
         
         </div>
         <h1 className='font-bold text-2xl text-left'>My Friends</h1>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-3 py-5'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-3 pt-5 pb-20'>
             
             {
                 Datas.map(Data => (
@@ -48,7 +48,7 @@ function HomePage() {
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{Data.name}</h2>
-    <p>{Data.email}</p>
+    <p className='font-semibold text-gray-600'>{Data.days_since_contact} Days Ago</p>
     <div className='flex gap-2 '>
         {Data.tags.map( (tag , index) => (
             <div key={index} className="badge badge-soft badge-accent items-center text-center">{tag}</div>

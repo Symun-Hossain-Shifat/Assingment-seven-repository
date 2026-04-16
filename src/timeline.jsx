@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import { UserContext } from './UserContext'
-import call from './assets/call.png'
-import text from './assets/text.png'
-import vedio from './assets/video.png'
+import { IoCallOutline } from 'react-icons/io5';
+import { MdOutlineTextsms } from 'react-icons/md';
+import { FaPhotoVideo } from 'react-icons/fa';
+
 
 function  TimelinePage() {
 
@@ -42,9 +43,9 @@ return (
 {( filterData === "All" || filterData  === 'Call') && (
 <div className='space-y-2'>
 {Call.map( (Data , index ) => (
-  <div key={index} className='flex gap-5 bg-white p-4 mt-2'>
+  <div key={index} className='flex gap-5 items-center bg-white p-4 mt-2'>
     <div>
-    <img src={call} alt="" />
+    <span><IoCallOutline size={40} /></span>
     </div>
     <div>
 <h2 className='font-bold text-2xl items-end  text-black flex gap-3'>Call <span > <p className='text-gray-600 
@@ -62,9 +63,9 @@ text-[15px] font-semibold'> Date : {Data.Date}  Time : {Data.Time} </p>
 {( filterData === "All" || filterData === 'Text') && (
 <div className='space-y-2'>
 {Text.map( (Data , index ) => (
-  <div key={index} className='flex gap-5 mt-2 bg-white p-4'>
+  <div key={index} className='flex items-center gap-5 mt-2 bg-white p-4'>
     <div>
-    <img src={text} alt="" />
+    <span><MdOutlineTextsms size={40} /></span>
     </div>
     <div>
 <h2 className='font-bold text-2xl items-end  text-black flex gap-3'>Text <span > <p className='text-gray-600 
@@ -84,9 +85,9 @@ text-[15px] font-semibold'> Date : {Data.Date}  Time : {Data.Time} </p>
 {( filterData === "All" || filterData === 'Vedio') && (
 <div className='space-y-2'>
 {Vedio.map( (Data , index ) => (
-  <div key={index} className='flex gap-5 mt-2 bg-white p-4'>
+  <div key={index} className='flex items-center gap-5 mt-2 bg-white p-4'>
     <div>
-    <img src={vedio} alt="" />
+    <span><FaPhotoVideo size={40} /></span>
     </div>
     <div>
 <h2 className='font-bold text-2xl items-end  text-black flex gap-3'>Vedio <span > <p className='text-gray-600 

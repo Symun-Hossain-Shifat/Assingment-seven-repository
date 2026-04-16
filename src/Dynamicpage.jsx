@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { FiArchive } from 'react-icons/fi';
-import callimg from './assets/call.png'
-import textimg from './assets/text.png'
-import vedioimg from './assets/video.png'
+import call from './assets/call.png'
+import text from './assets/text.png'
+import vedio from './assets/video.png'
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router'
@@ -76,15 +76,15 @@ function Dynamicpage() {
               <h2  className='font-bold text-1xl'>Quick Check In</h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div onClick={() => {callHandle(Data)}}  className=' cursor-pointer bg-gray-100 py-3 rounded-2xl items-center text-center'>
-                  <img className='mx-auto w-[5]' src={callimg} alt="" />
+                  <img className='mx-auto w-12' src={call} alt="" />
                   <h3 className='font-bold text-2xl'>Call</h3>
                 </div>
                 <div onClick={() => {TextHandle(Data)}}  className=' cursor-pointer bg-gray-100 py-3 rounded-2xl items-center text-center'>
-                  <img className='mx-auto w-[5]' src={textimg} alt="" />
+                  <img className='mx-auto w-12' src={text} alt="" />
                   <h3 className='font-bold text-2xl'>Text</h3>
                 </div>
                 <div onClick={() => {VedioHandle(Data)}}  className=' cursor-pointer bg-gray-100 py-3 rounded-2xl items-center text-center'>
-                  <img className='mx-auto w-[5]' src={vedioimg} alt="" />
+                  <img className='mx-auto w-12' src={vedio} alt="" />
                   <h3 className='font-bold text-2xl'>Vedio</h3>
                 </div>
                 
