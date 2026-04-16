@@ -4,7 +4,7 @@ import { NavLink, useLoaderData } from 'react-router'
 
 function HomePage() {
     const Datas  = useLoaderData();
-    console.log(Datas);
+    // console.log(Datas);
     
   return (
     <div className='w-12/15 mx-auto'>

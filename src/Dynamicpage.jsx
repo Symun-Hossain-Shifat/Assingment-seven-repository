@@ -41,7 +41,9 @@ function Dynamicpage() {
         ))}
     </div>
     <div className={`badge ${Data.status === 'Almost Due'?'badge-warning':Data.status === 'on-track'?'badge-primary':'badge-error'}`}>{Data.status}</div>
-    <p>{Data.bio}</p>
+    <p className='font-semibold text-gray-600'> Bio : {Data.bio}</p>
+    <p className='font-semibold text-gray-600'> E-mail : {Data.email}</p>
+
   </div>
           </div>
           <div className='flex gap-3 items-center bg-white py-3 justify-center'> <span><MdOutlineNotificationsActive /></span> <p className='font-semibold'>Snooz 2 weeks</p></div>
