@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Pie, PieChart } from 'recharts';
+import { Legend, Pie, PieChart } from 'recharts';
 import { UserContext } from './UserContext';
 
 
@@ -27,7 +27,7 @@ const {Call , Text , Vedio } = useContext(UserContext)
     <div className='w-10/12 mx-auto my-10'>
       <h2 className='text-3xl font-bold'>Friendship Analytics </h2>
       <p className='font-semibold text-green-900 my-4 text-left'>By Interaction Type</p>
-      <PieChart className='mx-auto py-10' style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }}>
+   <PieChart className='mx-auto py-10' style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }}>
       
       <Pie
         data={data}
@@ -41,11 +41,20 @@ const {Call , Text , Vedio } = useContext(UserContext)
         dataKey="value"
         isAnimationActive={isAnimationActive}
       />
-    
+    <Legend verticalAlign='bottom' height={36}></Legend>
     </PieChart>
- 
     </div>
    
   );
 }
 export default  StatsPage  
+
+
+
+
+
+
+
+
+
+  
