@@ -41,9 +41,9 @@ const {Call , Text , Vedio } = useContext(UserContext)
         dataKey="value"
         isAnimationActive={isAnimationActive}
       />
-     
+    
     </PieChart>
-
+ 
     </div>
    
   );
