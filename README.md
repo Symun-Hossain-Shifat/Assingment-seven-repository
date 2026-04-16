@@ -1,16 +1,19 @@
-# React + Vite
+Name of your project : 
+Assignment seven repository
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A short description : 
+This project is focused on friend connection analysis. In the Home section, users can view a list of friend data displayed in cards. By clicking on a friend’s card, the user is taken to a detailed page where complete information about that friend is shown. Users can interact with their friends through text, call, and video contact options. Additionally, the project includes a pie chart visualization that displays ratings and usage statistics based on text, call, and video interactions.
 
-Currently, two official plugins are available:
+Technologies you used  :
+* React Router
+* Tailwind CSS
+* DaisyUI
+* React Icon
+* React Toastify
+* Rechart
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3 key features of your project :
+  1. In Home section all friend data load from Api Json Data & showed each friend data in a card .
+  2. Clicking on a friends card the dynamic page open and the details Information about this friend will show there .
+  3. In state page there visualized a piechart  based on call , text , vedio ratings .
+  4. User Can Filter Data Based On Call , Text , Vedio In Timeline page
