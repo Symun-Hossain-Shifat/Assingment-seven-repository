@@ -17,19 +17,19 @@ function HomePage() {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 my-5'>
             <div className='bg-gray-100 rounded-2xl py-5 text-center items-center space-y-3 '>
                 <h2 className='font-bold text-2xl'>{Datas.length}</h2>
-                <p>Total Freinds</p>
+                <p className='font-semibold text-gray-600'>Total Freinds</p>
                 </div>
             <div className='bg-gray-100 rounded-2xl py-5 text-center items-center space-y-3 '>
                   <h2 className='font-bold text-2xl'>3</h2>
-                 <p>Total Freinds</p>
+                 <p  className='font-semibold text-gray-600'>On Track</p>
                 </div>
             <div className='bg-gray-100 rounded-2xl py-5 text-center items-center space-y-3  '>
                 <h2 className='font-bold text-2xl'>6</h2> 
-                <p>Total Freinds</p>
+                <p  className='font-semibold text-gray-600'>Need Attention</p>
                 </div>
             <div className='bg-gray-100 rounded-2xl py-5 text-center items-center space-y-3 '>
                 <h2 className='font-bold text-2xl'>14</h2>
-               <p>Total Freinds</p>
+               <p  className='font-semibold text-gray-600'>Interaction This Month</p>
                 </div>
         </div>
         
